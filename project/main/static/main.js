@@ -9,7 +9,6 @@ function generate_random_number(){
 function handle_six(){
     points_this_round = 0
     next_round()
-
 }
 
 function roll(){
@@ -25,6 +24,8 @@ function end_game(){
 
 function next_round(){
     if (round == 5) end_game()
+    let id_for_pts = `round${round}points`
+    document.getElementById(id_for_pts).innerHTML = `Round ${round}: ${points_this_round}`
     round += 1
     total_pts += points_this_round
     points_this_round = 0
