@@ -1,5 +1,29 @@
 {% extends 'base.html' %} 
 
 {% block content %} 
-
+<div class="container">
+    <div class="is-flex is-justify-content-center">
+        <br><br>
+        <h1 class="title">Hello world</h1>
+    </div>
+    <div class="columns">
+        <div class="column">
+            <div class="tile is-parent">
+                <article class="tile is-child box">
+                    <h1 class="title">Hello world!</h1>
+                    <p class="content">Hello</p>
+                </article>
+            </div>
+        </div>
+        <div class="column is-4">
+            <div class="tile is-parent">
+                <article class="tile is-child box">
+                    <h1 class="title">This should resize</h1>
+                    <p class="content">Yes it should</p>
+                </article>
+            </div>
+        </div>
+        
+    </div>
+</div>
 {% endblock %}
