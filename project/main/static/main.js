@@ -16,6 +16,10 @@ function turn(){
             if (!(confirm("roll again?"))){
                 break loop
             }
+            let list = document.getElementById('pointboard')
+            let ele = document.createElement('li')
+            ele.innerHTML = roll
+            list.append(ele)
         }
     }
     console.log(rolls)

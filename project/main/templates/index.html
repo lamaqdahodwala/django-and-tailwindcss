@@ -4,7 +4,59 @@
 <br><br>
 <div class="container">
     <script src="{% static 'main.js' %}"></script>
-    <p class="content" id="output">fdsafdsa</p>
-    <button onclick='turn()'>fdsafdsafdsa</button>
+    <div class="columns">
+        <div class="column is-3">
+            <div class="tile is-parent">
+                <article class="tile is-child box">
+                    <h1 class="title">Previous Round Scores</h1>
+                    <p>Round 1: </p>
+                    <p>Round 2:</p>
+                    <p>Round 3:</p>
+                    <p>Round 4:</p>
+                    <p>Round 5:</p>
+                </article>
+            </div>
+        </div>
+        
+        <div class="column">
+            <div class="is-flex is-justify-content-center">
+                <div class="box">
+                    <div class="is-flex is-justify-content-center is-flex-direction-column is-align-items-center">
+                        <h1 class="title">Scoreboard</h1>
+                        <p class="subtitle my-0">Last roll:</p>
+                        <p class="subtitle my-0">Current Total:</p>
+                    </div>
+                    <hr>
+                    <ul id='scoreboard' class='is-flex-direction-column is-flex is-justify-content-center is-align-items-center'>
+                        <li class="is-black">Previous scores</li>
+                    </ul>
+                    <hr>
+                    <div class="columns">
+                        <div class="column">
+                            <button class="button is-primary">Roll again</button>
+                        </div>
+                        <div class="column">
+                            <button class="button is-warning">Stop rolling</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column is-3">
+            <div class="tile is-parent">
+                <article class="tile is-child box">
+                    <h1 class="title">Round</h1>
+                    <ul>
+                        <p class="has-text-primary-dark">round 1</p>
+                        <p class="has-text-grey-light">round 2</p>
+                        <p class="has-text-grey-light">round 3</p>
+                        <p class="has-text-grey-light">round 4</p>
+                        <p class="has-text-grey-light">round 5</p>
+                        
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}
