@@ -1,10 +1,10 @@
 {% extends 'base.html' %} 
-
+{% load static %}
 {% block content %} 
 <br><br>
 <div class="container">
-    <div class="is-flex is-justify-content-center">
-        <form action="" method="get"></form>
-    </div>
+    <script src="{% static 'main.js' %}"></script>
+    <p class="content" id="output">fdsafdsa</p>
+    <button onclick='turn()'>fdsafdsafdsa</button>
 </div>
 {% endblock %}
