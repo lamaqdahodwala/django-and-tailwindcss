@@ -3,7 +3,7 @@
 {% block content %} 
 <br><br>
 <div class="container">
-    <script src="{% static 'main.js' %}"></script>
+    <script type='module' src="{% static 'main.js' %}"></script>
     <div class="columns">
         <div class="column is-3">
             <div class="tile is-parent">
@@ -24,7 +24,7 @@
                     <div class="is-flex is-justify-content-center is-flex-direction-column is-align-items-center">
                         <h1 class="title">Scoreboard</h1>
                         <p class="subtitle my-0" id='last-roll'>Last roll:</p>
-                        <p class="subtitle my-0" id='current-total'>Current Total:</p>
+                        <p class="subtitle my-0" id='current-total'>Current Possble Total:</p>
                     </div>
                     <hr>
                     <ul id='scoreboard' class='is-flex-direction-column is-flex is-justify-content-center is-align-items-center'>
@@ -33,10 +33,10 @@
                     <hr>
                     <div class="columns">
                         <div class="column">
-                            <button class="button is-primary" onclick='roll()'>Roll again</button>
+                            <button class="button is-primary" onclick='roll()' id='roll-again'>Roll again</button>
                         </div>
                         <div class="column">
-                            <button class="button is-warning" onclick="next_round()">End turn</button>
+                            <button class="button is-warning" onclick="next_round()" id='end-turn'>End turn</button>
                         </div>
                     </div>
                 </div>
@@ -57,6 +57,23 @@
                 </article>
             </div>
         </div>
+    </div>
+    <div id="end-game-screen" hidden='hidden'>
+        <hr>
+        <br>
+        <h1 class="title">Your final score: <span id="final-score"></span></h1>
+        <form action="/submissionofscore" method="get">
+            {% csrf_token %} 
+            <div class="control">
+                <input type="text" hidden='hidden' name='round-1-score' id='round-1-score'>
+                <input type="text" hidden="hidden" name="round-2-score" id="round-2-score">
+                <input type="text" hidden="hidden" name="round-3-score" id="round-3-score">
+                <input type="text" hidden="hidden" name="round-4-score" id="round-4-score">
+                <input type="text" hidden="hidden" name="round-5-score" id="round-5-score">
+                <input type="text" hidden="hidden" name="total-score" id="total-score">
+            </div>
+            <button type="submit">Submit score to leaderboard</button>
+        </form>
     </div>
 </div>
 {% endblock %}
