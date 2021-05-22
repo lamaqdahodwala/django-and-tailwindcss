@@ -1,0 +1,31 @@
+{% extends 'base.html' %} 
+
+{% block content %} 
+<div class="container">
+    <div class="tile is-ancestor">
+        {% if items %} 
+            {% for i in items %} 
+                <div class="tile is-parent">
+                    <article class="tile is-child box">
+                        <h1 class="title">{{ i.total }}</h1>
+                        <div class="is-flex is-justify-content-center is-align-items-center">
+                            <ul>
+                                <p>Round 1: {{r1}}</p>
+                                <p>Round 2: {{r2}}</p>
+                                <p>Round 3: {{r3}}</p>
+                                <p>Round 4: {{r4}}</p>
+                                <p>Round 5: {{r5}}</p>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            {% endfor %}
+        {% else %} 
+            <br><br><br>
+            <div class="is-flex is-justify-content-center is-align-items-center">
+                <h1 class="title">No one has submitted yet :(</h1>
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

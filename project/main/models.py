@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Score(models.Model):
+    person = models.CharField(max_length=200)
     total = models.IntegerField()
     r1 = models.IntegerField()
     r2 = models.IntegerField()
