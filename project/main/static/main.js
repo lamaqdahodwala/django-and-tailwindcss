@@ -26,8 +26,18 @@ function roll(){
 }
 
 function end_game(){
-    document.getElementById('round-1-score')
-    document.getElementById('end-game-screen').hidden = false
+    fetch('/submission', {
+        method: "POST",
+        body: {
+            "total": total_pts,
+            "r1": r1,
+            "r2": r2,
+            "r3": r3,
+            "r4": r4, 
+            "r5": r5
+        }
+    })
+    document.getElementById('final-score-title').innerHTML = total_pts
     
 }
 
@@ -56,7 +66,7 @@ function next_round(){
             break;
     }
     round += 1
-    if (round == 5) return end_game()
+    if (round == 6) return end_game()
     total_pts += points_this_round
     points_this_round = 0
 }

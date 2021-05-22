@@ -61,19 +61,11 @@
     <div id="end-game-screen" hidden='hidden'>
         <hr>
         <br>
-        <h1 class="title">Your final score: <span id="final-score"></span></h1>
-        <form action="/submissionofscore" method="get">
-            {% csrf_token %} 
-            <div class="control">
-                <input type="text" hidden='hidden' name='round-1-score' id='round-1-score'>
-                <input type="text" hidden="hidden" name="round-2-score" id="round-2-score">
-                <input type="text" hidden="hidden" name="round-3-score" id="round-3-score">
-                <input type="text" hidden="hidden" name="round-4-score" id="round-4-score">
-                <input type="text" hidden="hidden" name="round-5-score" id="round-5-score">
-                <input type="text" hidden="hidden" name="total-score" id="total-score">
-            </div>
-            <button type="submit">Submit score to leaderboard</button>
-        </form>
-    </div>
+        <div class="is-flex is-justify-content-center is-align-items-center">
+            <h1 class="title">Your final score: <span id='final-score-title'></span></h1>
+            <a href='/leaderboard' class="button is-large">
+                Go to leaderboard
+            </a>
+        </div>
 </div>
 {% endblock %}
