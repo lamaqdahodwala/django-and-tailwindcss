@@ -39,6 +39,11 @@ function end_game(){
     end_turn_btn.disabled = true
     end_turn_btn.className = 'button is-disabled'
     Cookie.set('score', total_pts)
+    Cookie.set('r1', r1)
+    Cookie.set('r2', r2)
+    Cookie.set('r3', r3)
+    Cookie.set('r4', r4)
+    Cookie.set('r5', r5)
 }
 
 function next_round(){
