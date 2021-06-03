@@ -1,0 +1,59 @@
+{% extends 'base.html' %} 
+
+{% block content %} 
+<br><br>
+<div class="container" xyz='fade stagger'>
+    <div class="columns">
+        <div class="column xyz-in is-3" xyz='inherit left'>
+            <div class="tile is-parent">
+                <article class="tile is-child box">
+                    <h1 class="title">Column 1</h1>
+                    <p class="content">
+                        This is column 1
+                    </p>
+                </article>
+            </div>
+        </div>
+
+        <div class="column xyz-in" xyz='inherit up'>
+            <div class="tile is-parent">
+                <article class="tile is-child box">
+                    <h1 class="title">Column 2</h1>
+                    <p class="content">
+                        This is column 2
+                    </p>
+                </article>
+            </div>
+        </div>
+
+        <div class="column xyz-in is-3" xyz='inherit right'>
+            <div class="tile is-parent">
+                <article class="tile is-child box">
+                    <h1 class="title">Column 3</h1>
+                    <p class="content">
+                        This is column 3
+                    </p>
+                </article>
+            </div>
+        </div>
+    </div>
+    <div class="columns">
+        <div class="column xyz-in" xyz='inherit down'>
+            <div class="tile is-parent">
+                <article class="tile is-child box">
+                    <h1 class="title">Column 4</h1>
+                    <p class="content">This is column 4</p>
+                </article>
+            </div>
+        </div>
+        <div class="column xyz-in" xyz='inherit down'>
+            <div class="tile is-parent">
+                <article class="tile is-child box">
+                    <h1 class="title">Column 5</h1>
+                    <p class="content">This is column 5</p>
+                </article>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
