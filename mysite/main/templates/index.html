@@ -1,8 +1,68 @@
 {% extends 'base.html' %} 
 
 {% block content %} 
+
+
 <br><br>
 <div class="container">
-    
+    <div class="hero" xyz='fade big up stagger'>
+        <div class="hero-head">
+            <h1 class="title is-1 xyz-in">Hello</h1>
+            <h3 class="subtitle is-3 xyz-in">I am September</h3>
+        </div>
+    </div>
+    <hr>
+    <section class="section is-transparent xyz-in" xyz='fade big up stagger delay-10'>
+        <div class="is-flex is-justify-content-center">
+            <p class="title xyz-in">My Pros</p>
+            <br>
+        </div>
+        <div class="columns" xyz='inherit flip-up rotate-left duration-10'>
+            <div class="column">
+                <div class="tile is-parent">
+                    <article class="tile is-child box">
+                        <h1 class="title xyz-nested">1.</h1>
+                        <h3 class="subtitle xyz-nested">Lamaq's birthday</h3>
+                        <p class="content xyz-nested">Lamaq's birthday is in September. Therefore, September is instantly superior to most other months</p>
+                    </article>
+                </div>
+            </div>
+            <div class="column">
+                <div class="tile is-parent">
+                    <article class="tile is-child box">
+                        <h1 class="title xyz-nested">2.</h1>
+                        <h3 class="subtitle xyz-nested">School starts again</h3>
+                        <p class="content xyz-nested">School stats again in September, giving everyone a chance to see their friends again and interact on a regular basis</p>
+                    </article>
+                </div>
+            </div>  
+        </div>
+    </section>
+    <section class='section is-transparent xyz-in' xyz='fade big up stagger delay-20'>
+        <hr>
+        <div class="is-flex is-justify-content-center">
+            <h1 class="title">My Cons</h1>
+        </div>
+        <div class="columns" xyz='inherit flip-down rotate-right duration-10'>
+            <div class="column">
+                <div class="tile is-parent">
+                    <article class="is-child tile box">
+                        <h1 class="title xyz-nested">1. </h1>
+                        <h3 class="subtitle xyz-nested xyz-nested">You're going back to school</h3>
+                        <p class="content xyz-nested">To be honest, no one likes going back to school after 3 months of vacation</p>
+                    </article>
+                </div>
+            </div>
+            <div class="column">
+                <div class="tile is-parent">
+                    <article class="tile is-child box">
+                        <h1 class="title xyz-nested">2.</h1>
+                        <h3 class="subtitle xyz-nested">More expectations</h3>
+                        <p class="content xyz-nested">Now that you're back in school, and the year is almost over, everyone will start yelling that "you don't do enough around here". </p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
 {% endblock %}
